@@ -31,8 +31,11 @@ function u_quickstart()
 return
 
 static function _WindowStarted()
-    Local root:= "file:///" + strTran(GetTempPath(), "\", "/")
+    Local tempPath:= GetTempPath()
+    Local root:= "file:///" + StrTran(tempPath, "\", "/")
 
+    //Local root := "http://127.0.0.1:9999/"
+  
     webview:navigate(root + "index.html")
 return
 
@@ -43,7 +46,7 @@ return
 
 static function _ReceivedMessage(key, value)
     if (key == "ALERT")
-		Alert(value, "TWebChannel QuickStart")
+        Alert(value, "TWebChannel QuickStart")
     else 
         conout(key + " - " + value)
     endif

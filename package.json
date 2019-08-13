@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@totvs/twebchannel-js": "^1.0.0"
+    "@totvs/twebchannel-js": "^1.0.3"
   }
 }
